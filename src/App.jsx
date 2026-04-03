@@ -7,6 +7,8 @@ import MigrationDashboard from './screens/MigrationDashboard';
 import ConnectAccount from './screens/ConnectAccount';
 import ResourceInventory from './screens/ResourceInventory';
 import Recommendation from './screens/Recommendation';
+import ProvisionVPC from './screens/ProvisionVPC';
+import DataMigration from './screens/DataMigration';
 import './App.css';
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
             />
             <Route path="/inventory" element={<ResourceInventory />} />
             <Route path="/recommendation" element={<Recommendation />} />
+            <Route path="/provision" element={<ProvisionVPC />} />
+            <Route path="/migration" element={<DataMigration />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

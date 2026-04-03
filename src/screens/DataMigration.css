@@ -1,0 +1,302 @@
+.migration-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.migration-header {
+  margin-bottom: 2rem;
+}
+
+.migration-header h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f4f4f4;
+}
+
+.migration-header .subtitle {
+  font-size: 1rem;
+  color: #c6c6c6;
+  line-height: 1.5;
+}
+
+/* Safety Notice */
+.safety-notice,
+.replication-notice,
+.validation-notice {
+  margin-bottom: 2rem;
+}
+
+/* Migration Overview */
+.migration-overview {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.migration-overview h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #f4f4f4;
+}
+
+.migration-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0f62fe;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: #f4f4f4;
+}
+
+.step-content p {
+  font-size: 0.875rem;
+  color: #c6c6c6;
+  line-height: 1.5;
+}
+
+/* Clusters to Migrate */
+.clusters-to-migrate {
+  margin-bottom: 2rem;
+}
+
+.clusters-to-migrate h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+}
+
+.cluster-migrate-card {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+
+.cluster-migrate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cluster-migrate-header h4 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.cluster-migrate-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #c6c6c6;
+}
+
+/* Replication Progress */
+.replication-progress {
+  margin-top: 2rem;
+}
+
+.replication-card {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.replication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cluster-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cluster-info h4 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.progress-percentage {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #0f62fe;
+}
+
+.replication-progress-bar {
+  margin-bottom: 1rem;
+}
+
+.replication-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 0.875rem;
+  color: #f4f4f4;
+  font-weight: 400;
+}
+
+/* Validation Checklist */
+.validation-checklist {
+  margin-bottom: 2rem;
+}
+
+.validation-checklist h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f4f4f4;
+}
+
+.checklist-description {
+  font-size: 0.875rem;
+  color: #c6c6c6;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cluster-checklist {
+  margin-bottom: 1rem;
+}
+
+.checklist-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid #393939;
+}
+
+.checklist-section:last-child {
+  border-bottom: none;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-header h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.section-description {
+  font-size: 0.875rem;
+  color: #c6c6c6;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.section-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Actions */
+.migration-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #393939;
+}
+
+.action-hint {
+  font-size: 0.875rem;
+  color: #8d8d8d;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .migration-container {
+    padding: 1rem;
+  }
+
+  .migration-steps {
+    gap: 1rem;
+  }
+
+  .replication-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .replication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .progress-percentage {
+    font-size: 1.25rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .status-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* Made with Bob */

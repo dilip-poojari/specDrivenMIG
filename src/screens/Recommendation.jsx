@@ -56,8 +56,7 @@ const Recommendation = () => {
       // Mark recommendation stage as complete and move to provision
       completeStage('recommendation');
       setCurrentStage('provision');
-      // In a real app, this would save approvals and proceed to provisioning
-      alert('Gate 2 passed! Proceeding to VPC provisioning. (This is a prototype - Screen 5 not yet built)');
+      navigate('/provision');
     }
   };
 
