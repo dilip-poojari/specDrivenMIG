@@ -150,10 +150,10 @@ ${mockRecommendations.map((rec, idx) => `
       + id                = (known after apply)
       + name              = "${rec.clusterId}-vpc"
       + vpc_id            = ibm_is_vpc.migration_vpc.id
-      + flavor            = "${rec.vpcProfile}"
-      + worker_count      = ${rec.vpcWorkerCount}
+      + flavor            = "${rec.vpc.profile}"
+      + worker_count      = ${rec.vpc.workerCount}
       + kube_version      = "1.28"
-      + zones             = ${JSON.stringify(rec.vpcZones)}
+      + zones             = ${JSON.stringify(rec.vpc.zones)}
       + resource_group_id = data.ibm_resource_group.default.id
     }
 `).join('\n')}
@@ -225,19 +225,19 @@ ${mockRecommendations.map((rec, idx) => `
                       <div className="cluster-provision-details">
                         <div className="detail-row">
                           <span className="detail-label">Profile:</span>
-                          <span className="detail-value">{rec.vpcProfile}</span>
+                          <span className="detail-value">{rec.vpc.profile}</span>
                         </div>
                         <div className="detail-row">
                           <span className="detail-label">Workers:</span>
-                          <span className="detail-value">{rec.vpcWorkerCount}</span>
+                          <span className="detail-value">{rec.vpc.workerCount}</span>
                         </div>
                         <div className="detail-row">
                           <span className="detail-label">Zones:</span>
-                          <span className="detail-value">{rec.vpcZones.join(', ')}</span>
+                          <span className="detail-value">{rec.vpc.zones.join(', ')}</span>
                         </div>
                         <div className="detail-row">
                           <span className="detail-label">Est. monthly:</span>
-                          <span className="detail-value">${rec.vpcEstimatedCost.toLocaleString()}</span>
+                          <span className="detail-value">${rec.vpc.estimatedMonthlyCost.toLocaleString()}</span>
                         </div>
                       </div>
                     </Tile>
