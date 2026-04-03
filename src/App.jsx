@@ -10,6 +10,8 @@ import Recommendation from './screens/Recommendation';
 import ProvisionVPC from './screens/ProvisionVPC';
 import DataMigration from './screens/DataMigration';
 import Validation from './screens/Validation';
+import CutoverFinish from './screens/CutoverFinish';
+import CutoverFinish from './screens/CutoverFinish';
 import './App.css';
 
 function App() {
@@ -53,6 +55,7 @@ function App() {
             <Route path="/provision" element={<ProvisionVPC />} />
             <Route path="/migration" element={<DataMigration />} />
             <Route path="/validation" element={<Validation />} />
+            <Route path="/cutover" element={<CutoverFinish />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

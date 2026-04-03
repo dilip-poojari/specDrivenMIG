@@ -1,0 +1,333 @@
+.cutover-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cutover-header {
+  margin-bottom: 2rem;
+}
+
+.cutover-header h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f4f4f4;
+}
+
+.cutover-header .subtitle {
+  font-size: 1rem;
+  color: #c6c6c6;
+  line-height: 1.5;
+}
+
+/* Notices */
+.cutover-notice,
+.monitoring-notice,
+.decommission-ready,
+.completion-notice {
+  margin-bottom: 2rem;
+}
+
+/* Cutover Readiness */
+.cutover-readiness {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.cutover-readiness h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #f4f4f4;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #f4f4f4;
+}
+
+.check-icon {
+  fill: #24a148;
+  flex-shrink: 0;
+}
+
+/* Cutover Info */
+.cutover-info {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.cutover-info h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #f4f4f4;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-item h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f4f4f4;
+}
+
+.info-item p {
+  font-size: 0.875rem;
+  color: #c6c6c6;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Monitoring Countdown */
+.monitoring-countdown {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.countdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.countdown-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.countdown-info svg {
+  fill: #0f62fe;
+}
+
+.countdown-info h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0 0 0.25rem 0;
+  color: #f4f4f4;
+}
+
+.countdown-time {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #0f62fe;
+  margin: 0;
+}
+
+.monitoring-progress {
+  margin-top: 1rem;
+}
+
+/* Cluster Metrics */
+.cluster-metrics {
+  margin-bottom: 2rem;
+}
+
+.cluster-metrics h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+}
+
+.metric-card {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.metric-card.warning {
+  border-left: 4px solid #ff832b;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.metric-header h4 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #f4f4f4;
+}
+
+.metric-value.warning {
+  color: #ff832b;
+}
+
+.metric-baseline {
+  font-size: 0.75rem;
+  color: #8d8d8d;
+}
+
+.metric-warning {
+  margin-top: 1rem;
+}
+
+/* Monitoring Summary */
+.monitoring-summary {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.monitoring-summary h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+}
+
+/* Completion Summary */
+.completion-summary {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.completion-summary h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #f4f4f4;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  color: #c6c6c6;
+}
+
+.summary-value {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #0f62fe;
+}
+
+/* Next Steps Complete */
+.next-steps-complete {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.next-steps-complete h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+}
+
+.next-steps-complete ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.next-steps-complete li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #393939;
+  color: #c6c6c6;
+  line-height: 1.5;
+}
+
+.next-steps-complete li:last-child {
+  border-bottom: none;
+}
+
+.next-steps-complete li::before {
+  content: "→";
+  margin-right: 0.5rem;
+  color: #0f62fe;
+}
+
+/* Actions */
+.cutover-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #393939;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cutover-container {
+    padding: 1rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .countdown-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Made with Bob */

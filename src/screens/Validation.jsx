@@ -30,8 +30,7 @@ const Validation = () => {
   const handleContinue = () => {
     completeStage('validation');
     setCurrentStage('cutover');
-    // Navigate to cutover screen (to be built)
-    alert('Ready for cutover! (Cutover & Finish screen coming next)');
+    navigate('/cutover');
   };
 
   const validationSummary = {
