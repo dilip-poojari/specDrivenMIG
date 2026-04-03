@@ -10,7 +10,12 @@ import {
   StructuredListHead,
   StructuredListBody,
   StructuredListRow,
-  StructuredListCell
+  StructuredListCell,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel
 } from '@carbon/react';
 import { ArrowRight, Add, Calendar, Money } from '@carbon/icons-react';
 import BobPanel from '../components/BobPanel';
@@ -135,11 +140,17 @@ const MigrationDashboard = ({ showScanSuccess = false, onDismissScanSuccess }) =
             className="incentive-banner"
           />
 
-          {/* Migration Statistics */}
-          <MigrationStatistics resources={[...mockClusters, ...mockDatabases]} />
-
-          {/* Summary Cards */}
-          <div className="summary-cards">
+          {/* Tabs */}
+          <Tabs>
+            <TabList aria-label="Migration dashboard tabs" contained>
+              <Tab>Overview</Tab>
+              <Tab>Migration Progress</Tab>
+            </TabList>
+            <TabPanels>
+              {/* Tab 1: Overview */}
+              <TabPanel>
+                {/* Summary Cards */}
+                <div className="summary-cards">
             <Tile className="summary-card">
               <div className="summary-icon">
                 <Calendar size={32} />
@@ -326,20 +337,28 @@ const MigrationDashboard = ({ showScanSuccess = false, onDismissScanSuccess }) =
             </StructuredListWrapper>
           </div>
 
-          {/* Team Collaboration */}
-          <div className="collaboration-section">
-            <Tile>
-              <h3>Team Collaboration</h3>
-              <p>Invite teammates to help with your migration. They'll get role-specific views without needing full hub access.</p>
-              <Button
-                kind="tertiary"
-                size="sm"
-                renderIcon={Add}
-              >
-                Invite teammates
-              </Button>
-            </Tile>
-          </div>
+                {/* Team Collaboration */}
+                <div className="collaboration-section">
+                  <Tile>
+                    <h3>Team Collaboration</h3>
+                    <p>Invite teammates to help with your migration. They'll get role-specific views without needing full hub access.</p>
+                    <Button
+                      kind="tertiary"
+                      size="sm"
+                      renderIcon={Add}
+                    >
+                      Invite teammates
+                    </Button>
+                  </Tile>
+                </div>
+              </TabPanel>
+
+              {/* Tab 2: Migration Progress */}
+              <TabPanel>
+                <MigrationStatistics resources={[...mockClusters, ...mockDatabases]} />
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
         </div>
       </div>
 
