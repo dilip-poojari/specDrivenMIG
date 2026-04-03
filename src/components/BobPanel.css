@@ -1,0 +1,144 @@
+.bob-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #262626;
+  border-left: 1px solid #393939;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.bob-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #393939;
+  background-color: #0f62fe;
+}
+
+.bob-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #0f62fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.bob-header h3 {
+  flex: 1;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.bob-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bob-messages {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.bob-message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #393939;
+  border-radius: 4px;
+  color: #f4f4f4;
+  line-height: 1.5;
+}
+
+.bob-message p {
+  margin: 0;
+}
+
+.bob-chat-history {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.chat-message {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #393939;
+}
+
+.chat-message:last-child {
+  border-bottom: none;
+}
+
+.chat-message strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #78a9ff;
+}
+
+.chat-message.user strong {
+  color: #42be65;
+}
+
+.chat-message p {
+  margin: 0;
+  color: #f4f4f4;
+}
+
+.bob-input {
+  padding: 1.5rem;
+  border-top: 1px solid #393939;
+  display: flex;
+  gap: 0.5rem;
+  background-color: #262626;
+}
+
+.bob-input .cds--text-input-wrapper {
+  flex: 1;
+}
+
+.bob-toggle-closed {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #0f62fe;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.bob-toggle-closed:hover {
+  background-color: #0353e9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1200px) {
+  .bob-panel {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* Made with Bob */

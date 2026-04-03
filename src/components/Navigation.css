@@ -1,0 +1,112 @@
+.migration-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 8000;
+  background-color: #262626;
+  border-right: 1px solid #393939;
+}
+
+.nav-header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #393939;
+}
+
+.nav-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f4f4f4;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-stage-item {
+  border-bottom: 1px solid #393939;
+}
+
+.stage-link {
+  padding: 1rem !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.stage-link:hover:not(.disabled) {
+  background-color: #393939;
+}
+
+.stage-link.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.stage-link.completed {
+  background-color: rgba(36, 161, 72, 0.05);
+}
+
+.stage-link.in_progress {
+  background-color: rgba(15, 98, 254, 0.1);
+  border-left: 3px solid #0f62fe;
+}
+
+.stage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.stage-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #f4f4f4;
+}
+
+.stage-gate {
+  font-size: 0.75rem;
+  color: #8d8d8d;
+  font-weight: 400;
+}
+
+.status-icon {
+  flex-shrink: 0;
+}
+
+.status-icon.completed {
+  fill: #42be65;
+}
+
+.status-icon.in-progress {
+  fill: #0f62fe;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-icon.locked {
+  fill: #8d8d8d;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Adjust main content when nav is open */
+.cds--side-nav--expanded ~ .main-content {
+  margin-left: 256px;
+}
+
+@media (max-width: 1056px) {
+  .cds--side-nav--expanded ~ .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Made with Bob */

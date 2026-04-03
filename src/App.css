@@ -1,0 +1,41 @@
+.app {
+  min-height: 100vh;
+  background-color: #161616;
+  padding-top: 48px; /* Height of Carbon Header */
+}
+
+.screen-container {
+  display: flex;
+  min-height: calc(100vh - 48px);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  margin-left: 256px; /* Width of side nav when expanded */
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.with-bob {
+  margin-right: 400px;
+}
+
+/* When nav is collapsed */
+.cds--side-nav:not(.cds--side-nav--expanded) ~ * .main-content {
+  margin-left: 48px; /* Width of collapsed nav */
+}
+
+@media (max-width: 1200px) {
+  .main-content.with-bob {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1056px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Made with Bob */

@@ -1,0 +1,21 @@
+@import '@carbon/styles/css/styles.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #161616;
+  color: #f4f4f4;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Made with Bob */
