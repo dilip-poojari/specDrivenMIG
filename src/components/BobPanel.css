@@ -1,9 +1,9 @@
 .bob-panel {
   position: fixed;
   right: 0;
-  top: 0;
+  top: 48px; /* Below the header */
   width: 400px;
-  height: 100vh;
+  height: calc(100vh - 48px);
   background-color: #262626;
   border-left: 1px solid #393939;
   display: flex;
@@ -15,30 +15,36 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #393939;
   background-color: #0f62fe;
+  min-height: 72px;
 }
 
-.bob-icon {
-  width: 40px;
-  height: 40px;
+.bob-avatar {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background-color: #ffffff;
-  color: #0f62fe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 1.25rem;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .bob-header h3 {
   flex: 1;
   margin: 0;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
+  line-height: 1.4;
+}
+
+.bob-close-button {
+  flex-shrink: 0;
+}
+
+.bob-close-button svg {
+  fill: #ffffff;
 }
 
 .bob-content {

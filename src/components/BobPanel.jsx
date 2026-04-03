@@ -38,14 +38,15 @@ const BobPanel = ({ messages = [], context = 'dashboard', isOpen = true, onToggl
   return (
     <div className="bob-panel">
       <div className="bob-header">
-        <div className="bob-icon">B</div>
+        <img src="/specDrivenMIG/images/bob-avatar.png" alt="Bob" className="bob-avatar" />
         <h3>Bob - Your Migration Assistant</h3>
-        <Button 
-          kind="ghost" 
-          size="sm" 
-          hasIconOnly 
+        <Button
+          kind="ghost"
+          size="sm"
+          hasIconOnly
           iconDescription="Close"
           onClick={onToggle}
+          className="bob-close-button"
         >
           <Close size={20} />
         </Button>
