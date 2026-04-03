@@ -1,15 +1,15 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { SideNav, SideNavItems, SideNavLink } from '@carbon/react';
-import { 
-  Checkmark, 
-  InProgress, 
+import {
+  Checkmark,
+  InProgress,
   Locked,
   Connect,
   Catalog,
   Recommend,
   CloudApp,
-  DataTransfer,
+  DataBase,
   CheckmarkOutline,
   Rocket
 } from '@carbon/icons-react';
@@ -56,7 +56,7 @@ const Navigation = ({ isOpen, onToggle }) => {
       id: 5,
       name: 'Data Migration',
       path: '/migration',
-      icon: DataTransfer,
+      icon: DataBase,
       status: 'locked',
       gate: 'Gate 4: Data Replicated'
     },
