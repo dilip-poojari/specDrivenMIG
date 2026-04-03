@@ -1,6 +1,8 @@
 .migration-statistics {
   margin: 2rem 0;
   padding: 1.5rem;
+  background: #262626;
+  border: 1px solid #393939;
 }
 
 .stats-header {
@@ -13,7 +15,7 @@
 .stats-header h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #161616;
+  color: #f4f4f4;
   margin: 0;
 }
 
@@ -45,7 +47,7 @@
 .progress-details {
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  color: #525252;
+  color: #c6c6c6;
 }
 
 .stats-grid {
@@ -56,7 +58,7 @@
 }
 
 .stat-card {
-  background: #f4f4f4;
+  background: #393939;
   border-radius: 4px;
   padding: 1rem;
   border-left: 4px solid transparent;
@@ -64,9 +66,9 @@
 }
 
 .stat-card:hover {
-  background: #e8e8e8;
+  background: #474747;
   transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .stat-card.completed {
@@ -125,32 +127,32 @@
 .stat-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #161616;
+  color: #f4f4f4;
 }
 
 .stat-value {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #161616;
+  color: #f4f4f4;
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
 .stat-description {
   font-size: 0.75rem;
-  color: #525252;
+  color: #c6c6c6;
   line-height: 1.4;
 }
 
 .status-breakdown {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #525252;
   padding-top: 1.5rem;
 }
 
 .status-breakdown h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #161616;
+  color: #f4f4f4;
   margin: 0 0 1rem 0;
 }
 
@@ -165,15 +167,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: #161616;
+  border: 1px solid #525252;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 .breakdown-item:hover {
-  background: #f4f4f4;
-  border-color: #c6c6c6;
+  background: #262626;
+  border-color: #6f6f6f;
 }
 
 .resource-info {
@@ -185,12 +187,12 @@
 .resource-name {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #161616;
+  color: #f4f4f4;
 }
 
 .resource-type {
   font-size: 0.75rem;
-  color: #525252;
+  color: #8d8d8d;
 }
 
 /* Responsive */
