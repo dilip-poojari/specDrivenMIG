@@ -20,10 +20,12 @@ import {
   mockBobMessages,
   getTotalEstimatedCost
 } from '../mock/mockData';
+import { useMigration } from '../context/MigrationContext';
 import './ResourceInventory.css';
 
 const ResourceInventory = () => {
   const navigate = useNavigate();
+  const { completeStage, setCurrentStage } = useMigration();
   const [bobOpen, setBobOpen] = useState(true);
 
   const totalResources = mockClusters.length + mockDatabases.length;
@@ -58,6 +60,9 @@ const ResourceInventory = () => {
   };
 
   const handleContinue = () => {
+    // Mark inventory stage as complete and move to recommendation
+    completeStage('inventory');
+    setCurrentStage('recommendation');
     navigate('/recommendation');
   };
 

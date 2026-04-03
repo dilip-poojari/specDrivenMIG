@@ -15,10 +15,12 @@ import {
 import { ArrowRight, Launch, Checkmark } from '@carbon/icons-react';
 import BobPanel from '../components/BobPanel';
 import { mockBobMessages } from '../mock/mockData';
+import { useMigration } from '../context/MigrationContext';
 import './ConnectAccount.css';
 
 const ConnectAccount = ({ onConnect }) => {
   const navigate = useNavigate();
+  const { completeStage, setCurrentStage } = useMigration();
   const [selectedService, setSelectedService] = useState(0);
   const [apiKey, setApiKey] = useState('');
   const [isValidating, setIsValidating] = useState(false);
@@ -85,6 +87,9 @@ const ConnectAccount = ({ onConnect }) => {
           clearInterval(progressInterval);
           clearInterval(messageInterval);
           setTimeout(() => {
+            // Mark connect stage as complete and move to inventory
+            completeStage('connect');
+            setCurrentStage('inventory');
             onConnect();
             navigate('/');
           }, 1000);

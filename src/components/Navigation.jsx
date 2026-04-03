@@ -13,67 +13,62 @@ import {
   CheckmarkOutline,
   Rocket
 } from '@carbon/icons-react';
+import { useMigration } from '../context/MigrationContext';
 import './Navigation.css';
 
 const Navigation = ({ isOpen, onToggle }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { getStageStatus, canAccessStage } = useMigration();
 
   const stages = [
     {
-      id: 1,
+      id: 'connect',
       name: 'Connect Account',
       path: '/connect',
       icon: Connect,
-      status: 'completed',
       gate: null
     },
     {
-      id: 2,
+      id: 'inventory',
       name: 'Resource Inventory',
       path: '/inventory',
       icon: Catalog,
-      status: 'completed',
       gate: 'Gate 1: Inventory Complete'
     },
     {
-      id: 3,
+      id: 'recommendation',
       name: 'Recommendation',
       path: '/recommendation',
       icon: Recommend,
-      status: 'in_progress',
       gate: 'Gate 2: Approval Required'
     },
     {
-      id: 4,
+      id: 'provision',
       name: 'Provision VPC',
       path: '/provision',
       icon: CloudApp,
-      status: 'locked',
       gate: 'Gate 3: Provisioning Complete'
     },
     {
-      id: 5,
+      id: 'migration',
       name: 'Data Migration',
       path: '/migration',
       icon: DataBase,
-      status: 'locked',
       gate: 'Gate 4: Data Replicated'
     },
     {
-      id: 6,
+      id: 'validation',
       name: 'Validation',
       path: '/validation',
       icon: CheckmarkOutline,
-      status: 'locked',
       gate: 'Gate 5: Validation Complete'
     },
     {
-      id: 7,
+      id: 'cutover',
       name: 'Cutover & Finish',
       path: '/cutover',
       icon: Rocket,
-      status: 'locked',
       gate: null
     }
   ];
@@ -95,10 +90,6 @@ const Navigation = ({ isOpen, onToggle }) => {
     return location.pathname === path;
   };
 
-  const canNavigate = (status) => {
-    return status === 'completed' || status === 'in_progress';
-  };
-
   return (
     <SideNav
       isFixedNav
@@ -115,7 +106,8 @@ const Navigation = ({ isOpen, onToggle }) => {
         {stages.map((stage) => {
           const StageIcon = stage.icon;
           const isCurrentStage = isActive(stage.path);
-          const disabled = !canNavigate(stage.status);
+          const status = getStageStatus(stage.id);
+          const disabled = !canAccessStage(stage.id);
 
           return (
             <div key={stage.id} className="nav-stage-item">
@@ -123,12 +115,12 @@ const Navigation = ({ isOpen, onToggle }) => {
                 renderIcon={() => <StageIcon size={20} />}
                 onClick={() => !disabled && navigate(stage.path)}
                 isActive={isCurrentStage}
-                className={`stage-link ${stage.status} ${disabled ? 'disabled' : ''}`}
+                className={`stage-link ${status} ${disabled ? 'disabled' : ''}`}
               >
                 <div className="stage-content">
                   <div className="stage-name">
                     <span>{stage.name}</span>
-                    {getStatusIcon(stage.status)}
+                    {getStatusIcon(status)}
                   </div>
                   {stage.gate && (
                     <div className="stage-gate">{stage.gate}</div>

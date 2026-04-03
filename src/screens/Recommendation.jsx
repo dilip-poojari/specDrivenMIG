@@ -15,10 +15,12 @@ import {
   mockIncentive,
   mockBobMessages
 } from '../mock/mockData';
+import { useMigration } from '../context/MigrationContext';
 import './Recommendation.css';
 
 const Recommendation = () => {
   const navigate = useNavigate();
+  const { completeStage, setCurrentStage } = useMigration();
   const [bobOpen, setBobOpen] = useState(true);
   const [approvedClusters, setApprovedClusters] = useState({});
   const [acknowledgedClusters, setAcknowledgedClusters] = useState({});
@@ -51,6 +53,9 @@ const Recommendation = () => {
 
   const handleContinue = () => {
     if (canProceed()) {
+      // Mark recommendation stage as complete and move to provision
+      completeStage('recommendation');
+      setCurrentStage('provision');
       // In a real app, this would save approvals and proceed to provisioning
       alert('Gate 2 passed! Proceeding to VPC provisioning. (This is a prototype - Screen 5 not yet built)');
     }
