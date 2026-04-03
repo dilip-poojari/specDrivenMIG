@@ -38,7 +38,7 @@ const BobPanel = ({ messages = [], context = 'dashboard', isOpen = true, onToggl
   return (
     <div className="bob-panel">
       <div className="bob-header">
-        <img src="/specDrivenMIG/images/bob-avatar.png" alt="Bob" className="bob-avatar" />
+        <img src={`${import.meta.env.BASE_URL}images/bob-avatar.png`} alt="Bob" className="bob-avatar" />
         <h3>Bob - Your Migration Assistant</h3>
         <Button
           kind="ghost"
