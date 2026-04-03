@@ -11,7 +11,6 @@ import ProvisionVPC from './screens/ProvisionVPC';
 import DataMigration from './screens/DataMigration';
 import Validation from './screens/Validation';
 import CutoverFinish from './screens/CutoverFinish';
-import CutoverFinish from './screens/CutoverFinish';
 import './App.css';
 
 function App() {
