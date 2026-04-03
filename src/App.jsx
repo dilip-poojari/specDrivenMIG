@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Theme theme="g100">
-      <Router>
+      <Router basename="/specDrivenMIG">
         <div className="app">
           <Header aria-label="IBM Cloud Migration Hub">
             <HeaderGlobalAction
