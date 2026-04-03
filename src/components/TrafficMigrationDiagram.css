@@ -1,0 +1,306 @@
+.traffic-migration-diagram {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.diagram-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.diagram-header h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+}
+
+.progress-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.progress-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f62fe;
+}
+
+.progress-label {
+  font-size: 0.75rem;
+  color: #525252;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.diagram-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.infrastructure-box {
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 1rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infrastructure-box.classic {
+  border-left: 4px solid #da1e28;
+}
+
+.infrastructure-box.vpc {
+  border-left: 4px solid #24a148;
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-indicator.classic-active {
+  background: #da1e28;
+  box-shadow: 0 0 8px rgba(218, 30, 40, 0.5);
+}
+
+.status-indicator.vpc-active {
+  background: #24a148;
+  box-shadow: 0 0 8px rgba(36, 161, 72, 0.5);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.box-header h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+}
+
+.box-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.traffic-percentage {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.percentage-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #161616;
+  line-height: 1;
+}
+
+.percentage-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #525252;
+  margin-top: 0.25rem;
+}
+
+.infrastructure-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #525252;
+}
+
+.detail-icon {
+  font-size: 1rem;
+}
+
+.traffic-flow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.flow-container {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flow-stream {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.flow-stream.classic-to-vpc {
+  background: linear-gradient(90deg, 
+    rgba(36, 161, 72, 0.1) 0%, 
+    rgba(36, 161, 72, 0.3) 100%);
+  border: 2px solid #24a148;
+  border-radius: 20px;
+}
+
+.flow-stream.classic-staying {
+  background: linear-gradient(90deg, 
+    rgba(218, 30, 40, 0.1) 0%, 
+    rgba(218, 30, 40, 0.3) 100%);
+  border: 2px solid #da1e28;
+  border-radius: 20px;
+}
+
+.traffic-arrow {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: flowRight 2s linear infinite;
+  color: inherit;
+}
+
+.flow-stream.classic-to-vpc .traffic-arrow {
+  color: #24a148;
+}
+
+.flow-stream.classic-staying .traffic-arrow {
+  color: #da1e28;
+}
+
+@keyframes flowRight {
+  0% {
+    left: -5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 105%;
+    opacity: 0;
+  }
+}
+
+.flow-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #525252;
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.flow-icon {
+  font-size: 1rem;
+}
+
+.migration-progress-bar {
+  margin-top: 1rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #da1e28 0%, #24a148 100%);
+  transition: width 0.5s ease;
+  border-radius: 4px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #525252;
+}
+
+.label-start,
+.label-end {
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .diagram-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .traffic-flow {
+    order: 2;
+  }
+
+  .infrastructure-box.vpc {
+    order: 3;
+  }
+
+  .flow-container {
+    height: 80px;
+  }
+
+  .flow-stream {
+    height: 30px;
+  }
+}
+
+/* Made with Bob */

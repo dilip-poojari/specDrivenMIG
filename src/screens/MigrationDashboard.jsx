@@ -14,6 +14,7 @@ import {
 } from '@carbon/react';
 import { ArrowRight, Add, Calendar, Money } from '@carbon/icons-react';
 import BobPanel from '../components/BobPanel';
+import MigrationStatistics from '../components/MigrationStatistics';
 import {
   mockUser,
   mockDeadline,
@@ -133,6 +134,9 @@ const MigrationDashboard = ({ showScanSuccess = false, onDismissScanSuccess }) =
             hideCloseButton
             className="incentive-banner"
           />
+
+          {/* Migration Statistics */}
+          <MigrationStatistics resources={[...mockClusters, ...mockDatabases]} />
 
           {/* Summary Cards */}
           <div className="summary-cards">

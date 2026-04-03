@@ -16,6 +16,7 @@ import {
 } from '@carbon/react';
 import { ArrowRight, Checkmark, WarningAlt, Renew, Time } from '@carbon/icons-react';
 import BobPanel from '../components/BobPanel';
+import TrafficMigrationDiagram from '../components/TrafficMigrationDiagram';
 import { mockClusters, mockRecommendations } from '../mock/mockData';
 import { useMigration } from '../context/MigrationContext';
 import './CutoverFinish.css';
@@ -242,6 +243,9 @@ const CutoverFinish = () => {
           {/* Monitoring State */}
           {cutoverState === 'monitoring' && (
             <>
+              {/* Traffic Migration Diagram */}
+              <TrafficMigrationDiagram progress={Math.min(100, (monitoringTime / 120) * 100)} />
+
               <InlineNotification
                 kind="info"
                 title="Cutover in progress"

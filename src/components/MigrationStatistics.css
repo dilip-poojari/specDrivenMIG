@@ -1,0 +1,219 @@
+.migration-statistics {
+  margin: 2rem 0;
+  padding: 1.5rem;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stats-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+}
+
+.overall-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.progress-percentage {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f62fe;
+  line-height: 1;
+}
+
+.progress-label {
+  font-size: 0.75rem;
+  color: #525252;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+.progress-bar-container {
+  margin-bottom: 2rem;
+}
+
+.progress-details {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #525252;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 1rem;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  background: #e8e8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.completed {
+  border-left-color: #24a148;
+}
+
+.stat-card.in-progress {
+  border-left-color: #0f62fe;
+}
+
+.stat-card.pending {
+  border-left-color: #8d8d8d;
+}
+
+.stat-card.needs-attention {
+  border-left-color: #da1e28;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.stat-icon {
+  flex-shrink: 0;
+}
+
+.stat-icon.completed {
+  color: #24a148;
+}
+
+.stat-icon.in-progress {
+  color: #0f62fe;
+  animation: spin 2s linear infinite;
+}
+
+.stat-icon.pending {
+  color: #8d8d8d;
+}
+
+.stat-icon.warning {
+  color: #da1e28;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #161616;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #161616;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 0.75rem;
+  color: #525252;
+  line-height: 1.4;
+}
+
+.status-breakdown {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.5rem;
+}
+
+.status-breakdown h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0 0 1rem 0;
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.breakdown-item:hover {
+  background: #f4f4f4;
+  border-color: #c6c6c6;
+}
+
+.resource-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.resource-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #161616;
+}
+
+.resource-type {
+  font-size: 0.75rem;
+  color: #525252;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .overall-progress {
+    align-items: flex-start;
+  }
+
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Made with Bob */
