@@ -143,16 +143,7 @@ const DataMigration = () => {
     if (isValidationComplete()) {
       completeStage('migration');
       setCurrentStage('validation');
-      setMigrationState('complete');
-      setBobMessages([
-        "Gate 4: Data Migration Complete!",
-        "All validation checks passed.",
-        "Ready to proceed to final validation and cutover?"
-      ]);
-      // For now, show alert since validation screen isn't built yet
-      setTimeout(() => {
-        alert('Gate 4 passed! Ready for final validation and cutover. (Validation screen coming next)');
-      }, 500);
+      navigate('/validation');
     }
   };
 
